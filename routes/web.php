@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('welcome');
+});
+Route::get('/tags', 'Admin\TagCrudController@showView');
+Route::get('/login', 'Auth\LoginController@showLogin');
+Route::post('/login', 'Auth\LoginController@login');
